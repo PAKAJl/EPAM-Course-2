@@ -9,12 +9,10 @@ namespace EPAM_Task_2.Classes
     class TextCleaner : ITextCleaner
     {
         private string[] _text;
-        private char[] _exeptionChars = new char[] {'!','?','#','.',',' };
 
         public TextCleaner(string[] text)
         {
-            _text = text;
-            
+            _text = text; 
         }
 
         public string[] Clean()
@@ -27,10 +25,6 @@ namespace EPAM_Task_2.Classes
                 buf.Add(clearedString.Trim().ToLower());
             }
             return buf.ToArray();
-
-
         }
-
-
     }
 }
