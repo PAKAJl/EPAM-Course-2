@@ -1,6 +1,6 @@
 ﻿using EPAM_Task_2.Interfaces;
-
 using System.Collections.Generic;
+using System.Configuration;
 using System.IO;
 using System.Linq;
 
@@ -12,9 +12,9 @@ namespace EPAM_Task_2.Classes
         ILogger logger;
         static char[] alphabet = new char[] { 'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'r', 's', 't', 'y', 'v', 'w', 'x', 'y', 'z' };
 
-        public FileManager(string path)
+        public FileManager()
         {
-            _path = path;
+            _path = ConfigurationManager.AppSettings["InputFile"];
             logger = new FileLogger();
         }
 

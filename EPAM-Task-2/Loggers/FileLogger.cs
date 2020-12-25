@@ -1,14 +1,12 @@
 ﻿using EPAM_Task_2.Interfaces;
-using System;
-using System.Collections.Generic;
 using System.IO;
-using System.Text;
+using System.Configuration;
 
 namespace EPAM_Task_2.Classes
 {
     class FileLogger:ILogger
     {
-        private string path = @"log.txt";
+        private string path = ConfigurationManager.AppSettings["OutputFile"];
         public void Log(string message)
         {
             using (StreamWriter sw = new StreamWriter(path, true, System.Text.Encoding.Default))

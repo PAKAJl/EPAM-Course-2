@@ -12,7 +12,7 @@ namespace EPAM_Task_2
         
         static void Main(string[] args)
         {
-            IDataManager manage = new FileManager("test.txt");
+            IDataManager manage = new FileManager();
             ICollection<string> stringList = manage.ReadAll();
             ITextCleaner textCleaner = new TextCleaner(stringList.ToArray());
             string[] cleanedText = textCleaner.Clean();
