@@ -12,13 +12,9 @@ namespace EPAM_Task_2.Classes
         {
             ReiterationList = new List<int>();
             Text = text;
-            AddPosition(position);
-            
+            AddPosition(position);     
         }
 
-        public void AddPosition(int pos)
-        {
-            ReiterationList.Add(pos);
-        }
+        public void AddPosition(int pos) => ReiterationList.Add(pos);
     }
 }

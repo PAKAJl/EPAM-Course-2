@@ -1,7 +1,6 @@
 ﻿using EPAM_Task_2.Interfaces;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Text.RegularExpressions;
 
 namespace EPAM_Task_2.Classes
@@ -10,10 +9,7 @@ namespace EPAM_Task_2.Classes
     {
         private string[] _text;
 
-        public TextCleaner(string[] text)
-        {
-            _text = text; 
-        }
+        public TextCleaner(string[] text) => _text = text; 
 
         public override string[] Clean()
         {
