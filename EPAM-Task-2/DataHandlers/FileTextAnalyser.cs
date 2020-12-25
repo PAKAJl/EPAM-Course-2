@@ -4,7 +4,7 @@ using System.Linq;
 
 namespace EPAM_Task_2.Classes
 {
-    class FileTextAnalyser : IAnalyser
+    class FileTextAnalyser : Analyser
     {
         private string[] _text;
         private ICollection<IWord> wordList;
@@ -15,7 +15,7 @@ namespace EPAM_Task_2.Classes
             _text = text;
         }
 
-        public void Analys()
+        public override void Analys()
         {
             for (int i = 0; i < _text.Length; i++)
             {
@@ -37,7 +37,7 @@ namespace EPAM_Task_2.Classes
             }
         }
 
-        public ICollection<IWord> GetWordList()
+        public override ICollection<IWord> GetWordList()
         {
             return wordList;
         }

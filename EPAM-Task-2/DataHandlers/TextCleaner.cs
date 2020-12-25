@@ -6,7 +6,7 @@ using System.Text.RegularExpressions;
 
 namespace EPAM_Task_2.Classes
 {
-    class TextCleaner : ITextCleaner
+    class TextCleaner : Cleaner
     {
         private string[] _text;
 
@@ -15,7 +15,7 @@ namespace EPAM_Task_2.Classes
             _text = text; 
         }
 
-        public string[] Clean()
+        public override string[] Clean()
         {
             RemoveMultiSpace();
             ICollection<string> buf = new List<string>();
