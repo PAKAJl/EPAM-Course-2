@@ -37,9 +37,6 @@ namespace EPAM_Task_2.Classes
             }
         }
 
-        public override ICollection<IWord> GetWordList()
-        {
-            return wordList;
-        }
+        public override ICollection<IWord> GetWordList() => wordList;
     }
 }
